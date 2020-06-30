@@ -1,0 +1,154 @@
+/* css */
+body{
+	margin: auto;
+	width: 80%;
+	background-repeat: no-repeat;
+	background-image: url(yuno.jpg);
+}
+
+.container{
+	
+	margin: 0 auto;
+	
+}
+.topnav{
+	background-color: lightpink;
+	/*width: 100%; */
+	width: 100%;
+	border: 17px solid lightpink;
+	text-align: center;
+	margin: auto;
+	overflow: hidden;	
+}
+
+.topnav a{
+	margin: auto;
+	float: center;
+	color: white;
+    text-align: center;
+    padding: 50px 50px; 
+    text-decoration: none;
+    font-size: 20px;
+}
+.topnav a:hover {
+  background-color:white;
+  color: lightpink;
+}
+
+.topnav a.active {
+  background-color: white;
+  color: lightpink;
+}
+
+
+.me{	 
+	
+	 text-align: center;
+	 font-size: 40px;
+	 font-family: Header;
+	 color: lightpink;
+	 stroke: black;
+	
+}
+.header{
+     text-align: center;	 
+	 font-size: 30px;
+	 font-family: Header;
+	 color: lightpink;
+}
+
+.lol{
+	text-align: center;	 
+	 font-size: 13px;
+	 font-family: Header;
+	 color: lightpink;
+	
+}
+.click{
+	 margin: auto;
+	 position: fixed;
+	 left:25px;
+	 top: 820px;
+	 font-size: 20px;
+	 font-family: Header;
+	 color: lightpink;
+	
+}
+
+.image {
+	 background-color: white;
+	 width: 53%;
+	 border: 5px solid lightpink;	 
+	 margin:auto;
+	 
+	 
+}
+.definitions-box{
+	 text-align:center;
+     background-color: white;
+	 width: 50%;
+	 border: 5px solid lightpink;
+	 padding-left: 100px;
+	 padding-right: 100px;
+	 margin: auto;
+	 font-size: 15px;
+	 font-family: Verdana;
+	 color: black;
+	 padding: 20px;  
+	 
+ }
+ .definitions-box a{
+	float: center;
+	color: lightpink;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+ 
+ .definitions-box a:hover{
+	  background-color:lightpink;
+  color: white;	 
+ }
+
+.definitions-box a.active {
+  background-color: lightpink;
+  color: white;
+}
+ 
+.recur-box{
+	background-color: white;
+	width: 50%;
+	border: 5px solid lightpink;
+	padding-left: 100px;
+	padding-right: 100px;
+	margin: auto;
+	font-size: 15px;
+	font-family: Verdana;
+	float: center;
+	color: black;
+    text-align: left;
+  }
+  
+  #git_button{ 
+  
+	  position: fixed;
+	   top: 860px;
+   left: 20px;
+   right: 900px;
+   bottom: 800px;
+	  width: 100px;
+	  height: 100px; 
+		
+	  
+  }
+  
+  #git_button:hover { 
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+} 
+
+ 
+  
+ 

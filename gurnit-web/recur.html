@@ -1,0 +1,155 @@
+
+<html>
+
+	<head>
+		<link rel="stylesheet" href="main.css">
+		<meta charset="utf-8">
+		<title> Gurnit Kaur's Website</title>
+	</head>
+	
+	<body>
+	<!-- Navigation bar -->
+		<div class="topnav">
+		<a href="index.html"> Home </a>
+		<a  href="index1.html"> About Me </a>		
+		<a  href="home.html"> PL1</a>
+		<a href="pl3.html"> PL3 </a>
+		<a class="active" href="recur.html">Recursive Descent Parser </a>
+		</div>
+		
+	<!-- header -->
+		<div class="header">
+		<h2> Recursive Descent Parser</h2>
+		</div>
+	<!-- recursive descent parser box -->
+	<div class="recur-box">
+
+		EXP    ::= EXP  + TERM   | EXP - TERM    | TERM	<br>
+		TERM   ::= TERM * FACTOR | TERM / FACTOR | FACTOR	<br>
+		FACTOR ::= ( EXP ) | DIGIT	<br>
+		DIGIT  ::= 0 | 1 | 2 | 3	<br><br>
+
+		Valid Strings:<br>
+		1+2$<br>
+		0-3*2$<br>
+		2/(3+1)$<br>
+
+		Invalid Strings:<br>
+		1+2<br>
+		1*4$<br>
+		1*a$<br><br>
+
+		Enter a Valid String:
+		<input id="input" type="text">
+		<button onclick="CheckString()"> Submit </button> <br>
+			
+
+	<script>
+		function CheckString() {
+		var input = document.getElementById("input").value;
+		
+		var count = 0;
+		var token = input[count];
+		var valid = 1;
+		
+		console.log("current token: " + token); 
+		Start();
+		
+		if (valid == 1){
+			document.getElementById("output").innerHTML = input + " is a valid string.";
+		} else {
+			document.getElementById("output").innerHTML = input + " is not a valid string.";
+		}
+
+		function Start(){
+			Exp();
+			if (token != '$'){
+				Error();
+			}
+			count++;
+			if (count != input.length){
+				Error();
+			}	
+		}
+
+		function Exp(){
+			if (token == '(' || token == '0' || token == '1' || token == '2' || token == '3' ){
+				Term();
+			} else {
+				Error();
+			}
+			
+			while (token == '+' || token == '-'){
+				Lex();
+				if (token == '(' || token == '0' || token == '1' || token == '2' || token == '3' ){
+					Term();
+				} else {
+					Error();
+				}
+			}
+		}
+
+		function Term(){
+			if (token == '(' || token == '0' || token == '1' || token == '2' || token == '3' ){
+				Factor();
+			} else {
+				Error();
+			}
+			
+			while (token == '*' || token == '/'){
+				Lex();
+				if (token == '(' || token == '0' || token == '1' || token == '2' || token == '3' ){
+					Factor();
+				} else {
+					Error();
+				}
+			}
+		}
+
+		function Factor(){
+			if (token == '('){
+				Lex();
+				Exp();
+				if (token == ')'){
+					Lex();
+				} else {
+					Error();
+				}
+			} else if ( token == '0' || token == '1' || token == '2' || token == '3' ){
+				Digit();
+			} else {
+				Error();
+			}
+			
+		}
+
+		function Digit(){
+			if ( token == '0' || token == '1' || token == '2' || token == '3' ){
+				Lex();
+			} else {
+				Error();
+			}
+		}
+		
+		function Lex(){
+			count++;
+			token = input[count];
+			console.log("current token: " + token); 
+		}
+		
+		function Error(){
+			valid = 0;
+		}
+
+	}
+	</script>
+	<p id="output"></p>
+	
+	</div>
+
+
+	
+
+	</body>
+
+</html>
