@@ -3,7 +3,7 @@ let myImage = document.querySelector('img');
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc == "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQG45rYrhJnp4pOMo9_S5cJ4W2aP_BqZfDFDg&usqp=CAU"){
-        myImage.setAttribute('src', "https://png.pngtree.com/element_our/sm/20180529/sm_5b0db20a1016b.jpg");
+        myImage.setAttribute('src', "https://ssl.pstatic.net/static/m/vlive/mobile/2018/04/24/iOS8_512X512.png");
     }
      else {
          myImage.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQG45rYrhJnp4pOMo9_S5cJ4W2aP_BqZfDFDg&usqp=CAU');

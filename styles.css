@@ -144,3 +144,9 @@ button:hover {
     height: 1000px;
 }
 
+figure {
+    align-content: center;
+    margin:auto 0;
+    box-sizing: border-box;
+}
+
