@@ -1,7 +1,6 @@
 body {
    
-    background-color: white;
-    /* background-color:#bfedff; */
+    background-color: white;   
     width:100%; 
     margin-bottom: -100px;
     margin-left: -3px;
@@ -79,6 +78,15 @@ button:hover {
     border: solid 2px  pink;
     font-size: 32px;
 }
+
+.vlive { 
+    position: -webkit-sticky;
+    position:sticky;
+    margin:0 auto;  
+    top:4rem;
+    
+    
+}
 .content img{     
     /* display: inline-flex;    */
     margin-left: -8px;
@@ -130,5 +138,9 @@ button:hover {
     border: solid 5px white;
     box-sizing: border-box;
     opacity: 0.85;
+}
+
+.Footer {
+    height: 1000px;
 }
 
